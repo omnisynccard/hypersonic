@@ -1,0 +1,78 @@
+{
+  "name": "數位名片",
+  "short_name": "名片",
+  "description": "專業的數位名片網站，支援 iPhone 和 Android 加入主畫面",
+  "start_url": ".",
+  "scope": "/hypersonic/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#2C3E50",
+  "background_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/photo.jpg",
+      "sizes": "540x720",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "assets/photo.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "shortcuts": [
+    {
+      "name": "撥打電話",
+      "short_name": "電話",
+      "description": "快速撥打聯絡電話",
+      "url": "./?action=call",
+      "icons": [
+        {
+          "src": "assets/icon.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "發送 Email",
+      "short_name": "Email",
+      "description": "快速發送電子郵件",
+      "url": "./?action=email",
+      "icons": [
+        {
+          "src": "assets/icon.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

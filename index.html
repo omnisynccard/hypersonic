@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hyper 科技 - 員工數位名片" />
+  <title>Hyper 科技 - 選擇員工</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1a3a5c 0%, #2d5a8c 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      color: #1a3a5c;
+      margin-bottom: 8px;
+    }
+
+    .header-logo {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .header-logo img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .header p {
+      color: #888;
+      font-size: 0.95rem;
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+    }
+
+    .person-card {
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 12px;
+      padding: 20px;
+      border: 2px solid transparent;
+    }
+
+    .person-card:hover {
+      border-color: #1a3a5c;
+      background: rgba(26, 58, 92, 0.05);
+      transform: translateY(-4px);
+    }
+
+    .person-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 12px;
+      border: 3px solid #1a3a5c;
+      display: block;
+    }
+
+    .person-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .person-title {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .loading {
+      text-align: center;
+      color: #888;
+      padding: 40px 20px;
+    }
+
+    .error {
+      background: #fee;
+      color: #c33;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo">
+        <img src="shared/logo.png" alt="Hypersonic" />
+      </div>
+      <p>選擇員工查看數位名片</p>
+    </div>
+
+    <div id="content">
+      <div class="loading">載入中...</div>
+    </div>
+  </div>
+
+  <script>
+    async function init() {
+      try {
+        const response = await fetch('people.json');
+        if (!response.ok) throw new Error('無法載入 people.json');
+        const config = await response.json();
+
+        const content = document.getElementById('content');
+        content.innerHTML = '';
+
+        const grid = document.createElement('div');
+        grid.className = 'people-grid';
+
+        config.people.forEach(person => {
+          const card = document.createElement('a');
+          card.className = 'person-card';
+          card.href = `framework/?id=${person.id}`;
+          card.innerHTML = `
+            <img src="${person.assets.iconUrl}" alt="${person.name.zh}" class="person-avatar" 
+                 onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(person.name.en)}&size=200&background=1a3a5c&color=fff&bold=true'" />
+            <div class="person-name">${person.name.zh}</div>
+            <div class="person-title">${person.title}</div>
+          `;
+          grid.appendChild(card);
+        });
+
+        content.appendChild(grid);
+      } catch (error) {
+        console.error('初始化失敗:', error);
+        document.getElementById('content').innerHTML = `
+          <div class="error">
+            <strong>載入失敗</strong><br>
+            ${error.message}
+          </div>
+        `;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>

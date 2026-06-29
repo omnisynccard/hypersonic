@@ -1,0 +1,82 @@
+{
+  "company": {
+    "name": "瀚軒股份有限公司",
+    "nameEn": "Hypersonic",
+    "website": "https://www.hpc.com.tw",
+    "logoUrl": "shared/logo.png",
+    "stockCode": "7894",
+    "stockMarket": "TWSE",
+    "address": "桃園市中壢區中華路二段209號",
+    "phone": "03-561-1902",
+    "email": "contact@hyper-tech.com"
+  },
+
+  "theme": {
+    "primaryColor": "#2C3E50",
+    "accentColor": "#E8A76F",
+    "backgroundColor": "#F5EFE7",
+    "textColor": "#1A1410"
+  },
+
+  "people": [
+    {
+      "id": "TonyChen",
+      "name": {
+        "zh": "陳文冠",
+        "en": "Tony Chen"
+      },
+      "title": "集團總經理 / President",
+      "department": "總公司",
+      "contact": {
+        "mobile": "+886-932-321-200",
+        "phone": "+886-3-461-1902, 520",
+        "fax": "+886-3-452-4128",
+        "email": "tony_chen@hpc.com.tw"
+      },
+      "social": {
+        "line": "",
+        "lineUrl": "",
+        "instagram": "",
+        "facebook": "",
+        "linkedin": "",
+        "youtube": "",
+        "twitter": ""
+      },
+      "assets": {
+        "photoUrl": "people/TonyChen/assets/photo.jpg",
+        "iconUrl": "people/TonyChen/assets/icon.png",
+        "namecardFolder": "people/TonyChen/namecard/"
+      }
+    },
+
+    {
+      "id": "TerryLin",
+      "name": {
+        "zh": "林逸群",
+        "en": "Terry Lin"
+      },
+      "title": "資深副總經理 / Senior VP",
+      "department": "總公司",
+      "contact": {
+        "mobile": "+886-912-987-654",
+        "phone": "+886-3-461-1902, 320",
+        "fax": "+886-3-452-4128",
+        "email": "terry_lin@hpc.com.tw"
+      },
+      "social": {
+        "line": "terrylin22615380",
+        "lineUrl": "https://line.me/ti/p/terrylin22615380",
+        "instagram": "",
+        "facebook": "",
+        "linkedin": "",
+        "youtube": "",
+        "twitter": ""
+      },
+      "assets": {
+        "photoUrl": "people/TerryLin/assets/photo.jpg",
+        "iconUrl": "people/TerryLin/assets/icon.png",
+        "namecardFolder": "people/TerryLin/namecard/"
+      }
+    }
+  ]
+}
