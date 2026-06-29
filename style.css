@@ -1,101 +1,101 @@
 <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    body {
-      font-family: 'Noto Sans TC', 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #3877af 0%, #1a3a5c 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
+  body {
+    font-family: 'Noto Sans TC', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #3877af 0%, #1a3a5c 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
 
-    .container {
-      background: #ffe9ca;
-      border-radius: 20px;
-      padding: 40px 30px;
-      max-width: 600px;
-      width: 100%;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    }
+  .container {
+    background: #ffe9ca;
+    border-radius: 20px;
+    padding: 40px 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
 
-    .header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
-    .header h1 {
-      font-size: 2rem;
-      color: #1a3a5c;
-      margin-bottom: 8px;
-    }
+  .header h1 {
+    font-size: 2rem;
+    color: #1a3a5c;
+    margin-bottom: 8px;
+  }
 
-    .header p {
-      color: #888;
-      font-size: 0.95rem;
-    }
+  .header p {
+    color: #888;
+    font-size: 0.95rem;
+  }
 
-    .people-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 20px;
-    }
+  .people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+  }
 
-    .person-card {
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-      border-radius: 12px;
-      padding: 20px;
-      border: 2px solid transparent;
-    }
+  .person-card {
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid transparent;
+  }
 
-    .person-card:hover {
-      border-color: #1a3a5c;
-      background: rgba(26, 58, 92, 0.05);
-      transform: translateY(-4px);
-    }
+  .person-card:hover {
+    border-color: #1a3a5c;
+    background: rgba(26, 58, 92, 0.05);
+    transform: translateY(-4px);
+  }
 
-    .person-avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 12px;
-      border: 3px solid #1a3a5c;
-      display: block;
-    }
+  .person-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 12px;
+    border: 3px solid #1a3a5c;
+    display: block;
+  }
 
-    .person-name {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 4px;
-    }
+  .person-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+  }
 
-    .person-title {
-      font-size: 0.8rem;
-      color: #888;
-    }
+  .person-title {
+    font-size: 0.8rem;
+    color: #888;
+  }
 
-    .loading {
-      text-align: center;
-      color: #888;
-      padding: 40px 20px;
-    }
+  .loading {
+    text-align: center;
+    color: #888;
+    padding: 40px 20px;
+  }
 
-    .error {
-      background: #fee;
-      color: #c33;
-      padding: 16px;
-      border-radius: 8px;
-      margin-bottom: 20px;
+  .error {
+    background: #fee;
+    color: #c33;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
     }
-  </style>
+</style>
